@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script type="text/javascript" src="js/api.js">
+    </script>
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth">
+    </script>
+  </head>
+  <body>
+    <div id="authorize-div" style="display: none">
+      <span>Authorize access to Google Apps Script Execution API</span>
+      <!--Button for the user to click to initiate auth sequence -->
+      <button id="authorize-button" onclick="handleAuthClick(event)">
+        Authorize
+      </button>
+    </div>
+      <form>
+        <label>Email Addres:</label><br>
+        <input id="email" type="text"><br>
+        <label>Subject:</label><br>
+        <input id="subject" type="text"><br>
+        <label>Message:</label><br>
+        <textarea id="text" name="name" rows="8" cols="80"></textarea><br>
+      </form>
+      <button  onclick="callScriptFunction();">Send Mail</button>
+      <button  onclick="clean();">Clean fields</button>
+    <pre id="output"></pre>
+  </body>
+</html>
